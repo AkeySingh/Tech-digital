@@ -1,0 +1,4 @@
+
+#00a2ad    	blue 
+##f9f7f6   off white
+#f6a801 	orange
