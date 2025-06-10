@@ -1,176 +1,164 @@
+// src/components/About.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRocket, FaUsers, FaChartLine, FaCogs } from "react-icons/fa";
+import { FaBullseye, FaRocket, FaUsers } from "react-icons/fa";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 export default function About() {
   return (
-    <div className="bg-white">
-      {/* 🔹 Hero Banner */}
-      <div
-        className="bg-cover bg-center h-[400px] flex items-center justify-center text-white"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1531496651587-1c1a6b1b68d5?auto=format&fit=crop&w=1650&q=80')",
-        }}
-      >
+    <section className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-100 to-white py-20 px-4 text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded"
+          className="text-5xl font-bold mb-4"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
         >
           About Tech Digital Solutions
         </motion.h1>
+        <motion.p
+          className="text-lg max-w-2xl mx-auto text-gray-600"
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.2 }}
+        >
+          Empowering businesses with innovative digital solutions that deliver
+          measurable growth and long-lasting results.
+        </motion.p>
       </div>
 
-      {/* 🔹 Who We Are */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      {/* Who We Are */}
+      <div className="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-            Who We Are
-          </h2>
-          <p className="text-lg text-gray-600 leading-8 text-center max-w-3xl mx-auto">
-            We are a passionate team of designers, developers, and marketers
-            helping businesses make an impact online. With a focus on strategy,
-            innovation, and results—we bring your digital ideas to life.
+          <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
+          <p className="text-gray-700 leading-7">
+            At Tech Digital Solutions, we’re a team of creatives, developers,
+            and strategists who are passionate about building your online
+            presence. We specialize in web development, SEO, social media, and
+            full-stack marketing tailored to your unique business needs.
+          </p>
+          <p className="mt-4 text-gray-700">
+            Our mission is to simplify digital growth for startups, small
+            businesses, and enterprises alike—by crafting clean, effective, and
+            conversion-driven digital strategies.
           </p>
         </motion.div>
-      </section>
+        <motion.img
+          src="https://source.unsplash.com/600x400/?technology,team"
+          alt="Team"
+          className="rounded-xl shadow-md"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+        />
+      </div>
 
-      {/* 🔹 Mission and Vision */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1603381447937-6ccfcf4a2cf5?auto=format&fit=crop&w=800&q=80"
-              alt="Mission"
-              className="rounded-xl shadow-md"
-            />
+      {/* Mission & Vision */}
+      <div className="bg-gray-50 py-16 px-4">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+          <motion.div variants={fadeIn} initial="hidden" whileInView="visible">
+            <FaRocket className="text-blue-600 text-4xl mb-2" />
+            <h3 className="text-2xl font-semibold mb-2">Our Mission</h3>
+            <p className="text-gray-700">
+              To deliver innovative digital marketing and development solutions
+              that empower businesses to grow faster and smarter.
+            </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ delay: 0.2 }}
           >
-            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-              Our Mission & Vision
-            </h3>
-            <p className="text-gray-700 leading-7">
-              Our mission is to help businesses thrive through digital
-              transformation. We envision a world where every business, big or
-              small, has access to powerful tools that drive growth and
-              visibility in the online world.
+            <FaBullseye className="text-green-600 text-4xl mb-2" />
+            <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
+            <p className="text-gray-700">
+              To become a trusted global digital partner known for transparency,
+              creativity, and performance excellence.
             </p>
           </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* 🔹 Why Choose Us */}
-      <section className="py-20 px-6 max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-4xl font-bold text-gray-800 mb-12"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Why Choose Tech Digital Solutions?
-        </motion.h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {[
-            {
-              icon: <FaRocket size={40} className="text-blue-600 mb-3" />,
-              title: "Result Driven",
-              desc: "Everything we do is aimed at getting you measurable results.",
-            },
-            {
-              icon: <FaUsers size={40} className="text-green-600 mb-3" />,
-              title: "Client-Centric",
-              desc: "We build lasting relationships with honesty and transparency.",
-            },
-            {
-              icon: <FaChartLine size={40} className="text-purple-600 mb-3" />,
-              title: "Marketing Experts",
-              desc: "From SEO to paid ads—we bring full-stack digital expertise.",
-            },
-            {
-              icon: <FaCogs size={40} className="text-red-500 mb-3" />,
-              title: "Tech-Savvy",
-              desc: "We use modern tools and trends to stay ahead of the curve.",
-            },
-          ].map((card, idx) => (
-            <motion.div
-              key={idx}
-              className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              {card.icon}
-              <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                {card.title}
-              </h4>
-              <p className="text-gray-600">{card.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* 🔹 Optional Team Section */}
-      {/* <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.h2
-            className="text-4xl font-bold mb-6 text-gray-800"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            Meet Our Team
-          </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-            We're a crew of creators, thinkers, problem-solvers, and doers—
-            united by a passion for digital excellence.
-          </p>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {["dev", "seo", "design", "ads"].map((role, i) => (
+      {/* Why Choose Us */}
+      <div className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-10">Why Choose Us?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <FaUsers className="text-blue-500 text-3xl mb-2" />,
+                title: "Expert Team",
+                desc: "Experienced developers and digital marketers under one roof.",
+              },
+              {
+                icon: <FaRocket className="text-pink-500 text-3xl mb-2" />,
+                title: "Growth-Focused",
+                desc: "We design every strategy to maximize ROI and conversions.",
+              },
+              {
+                icon: <FaBullseye className="text-green-500 text-3xl mb-2" />,
+                title: "Result-Driven",
+                desc: "Transparent processes and measurable outcomes in every campaign.",
+              },
+            ].map((item, i) => (
               <motion.div
                 key={i}
-                className="bg-white p-4 rounded-lg shadow-md"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.2, duration: 0.4 }}
+                className="p-6 rounded-xl shadow hover:shadow-lg bg-gray-50"
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                variants={fadeIn}
               >
-                <img
-                  src={`https://randomuser.me/api/portraits/${
-                    i % 2 === 0 ? "men" : "women"
-                  }/${20 + i}.jpg`}
-                  alt={role}
-                  className="w-20 h-20 mx-auto rounded-full mb-3"
-                />
-                <h4 className="text-lg font-semibold text-gray-800">
-                  {role.toUpperCase()} Lead
-                </h4>
-                <p className="text-sm text-gray-500">Creative & Dedicated</p>
+                {item.icon}
+                <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section> */}
-    </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-blue-600 text-white text-center py-16 px-4">
+        <motion.h2
+          className="text-3xl font-bold mb-4"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+        >
+          Let’s Build Something Amazing Together
+        </motion.h2>
+        <motion.p
+          className="mb-6 text-lg"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ delay: 0.2 }}
+        >
+          Contact us today and take the first step towards digital growth.
+        </motion.p>
+        <motion.a
+          href="/contact"
+          className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ delay: 0.3 }}
+        >
+          Get in Touch
+        </motion.a>
+      </div>
+    </section>
   );
 }

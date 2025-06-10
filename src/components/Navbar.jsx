@@ -9,7 +9,9 @@ export default function Navbar() {
   const dropdownRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const toggleDropdown = () => setDropdownOpen(true);
+  const closeDropdown = () => setDropdownOpen(false);
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -26,7 +28,7 @@ export default function Navbar() {
   const servicesData = [
     {
       category: "🔍 SEO Services",
-      path: "seo-services",
+      path: "seo",
       items: [
         { name: "Keyword Research", path: "/services/seo/keyword-research" },
         { name: "On-Page SEO", path: "/services/seo/on-page" },
@@ -109,6 +111,7 @@ export default function Navbar() {
     },
     {
       category: "📊 Analytics",
+      path: "analytics",
       items: [
         { name: "GA4 Setup", path: "/services/analytics/ga4" },
         { name: "Conversion Tracking", path: "/services/analytics/tracking" },
@@ -139,21 +142,23 @@ export default function Navbar() {
             </Link>
 
             <div className="relative">
-              <button
-                onClick={toggleDropdown}
-                className="relative px-5 py-2 font-bold text-[#00a2ad] hover:text-white hover:bg-gradient-to-r from-[#00a2ad] to-[#f6a801] rounded transition duration-300 flex items-center"
-              >
-                Services
-                <svg
-                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${
-                    dropdownOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+              <Link to="/services">
+                <button
+                  onMouseOver={toggleDropdown}
+                  className="relative px-5 py-2 font-bold text-[#00a2ad] hover:text-white hover:bg-gradient-to-r from-[#00a2ad] to-[#f6a801] rounded transition duration-300 flex items-center"
                 >
-                  <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
-                </svg>
-              </button>
+                  Services
+                  <svg
+                    className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+                      dropdownOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                  </svg>
+                </button>
+              </Link>
 
               {/* Dropdown */}
 
@@ -165,9 +170,12 @@ export default function Navbar() {
                   <div className="grid grid-cols-3 gap-4">
                     {servicesData.map((section, index) => (
                       <div key={index}>
-                        <p className="px-2 py-1 font-semibold text-[#00a2ad]">
+                        <p
+                          onClick={closeDropdown}
+                          className="px-2 py-1 font-semibold text-[#00a2ad]"
+                        >
                           <Link
-                            to={section.path}
+                            to={`services/${section.path}`}
                             className="block   hover:text-[#f6a801] transition"
                           >
                             {" "}
