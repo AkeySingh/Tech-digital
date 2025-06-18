@@ -59,9 +59,9 @@ export default function WhyChooseUs() {
           className="text-lg md:text-xl text-sky-200 mb-12 max-w-3xl mx-auto"
           variants={fadeInUp}
         >
-          At Tech Digital Solutions, we do more than offer services — we build
-          growth engines for modern businesses. Here's why we're the team you
-          can trust.
+          At Tech Digital, we do more than offer services — we build growth
+          engines for modern businesses. Here's why we're the team you can
+          trust.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -93,60 +93,3 @@ export default function WhyChooseUs() {
     </motion.section>
   );
 }
-
-// export default function WhyChooseUs() {
-//   return (
-//     <motion.section
-//       className="bg-[#f9f7f6] py-20 px-6 text-[#1e293b]"
-//       variants={staggerContainer}
-//       initial="hidden"
-//       whileInView="visible"
-//       viewport={{ once: true }}
-//     >
-//       <div className="max-w-6xl mx-auto text-center">
-//         <motion.h2
-//           className="text-4xl md:text-5xl font-extrabold mb-6"
-//           variants={fadeInUp}
-//         >
-//           Why Choose{" "}
-//           <span className="text-[#00a2ad]">Tech Digital Solutions?</span>
-//         </motion.h2>
-
-//         <motion.p
-//           className="text-lg md:text-xl text-[#334155] mb-12 max-w-3xl mx-auto"
-//           variants={fadeInUp}
-//         >
-//           At Tech Digital Solutions, we do more than offer services — we build
-//           growth engines for modern businesses. Here's why we're the team you
-//           can trust.
-//         </motion.p>
-
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-//           {features.map(({ icon, title, desc }, index) => (
-//             <motion.div
-//               key={index}
-//               className="bg-white p-8 rounded-xl border border-[#00a2ad33] shadow-md hover:shadow-lg transition-all hover:scale-[1.03]"
-//               variants={fadeInUp}
-//               whileHover={{ y: -5 }}
-//             >
-//               <div className="text-4xl text-[#00a2ad] mb-4">{icon}</div>
-//               <h3 className="text-xl font-semibold text-[#00a2ad] mb-2">
-//                 {title}
-//               </h3>
-//               <p className="text-[#555] leading-relaxed">{desc}</p>
-//             </motion.div>
-//           ))}
-//         </div>
-
-//         <motion.div className="mt-16" variants={fadeInUp}>
-//           <a
-//             href="#contact"
-//             className="inline-block bg-[#00a2ad] hover:bg-[#f6a801] text-white font-bold px-8 py-3 rounded-full transition-all"
-//           >
-//             Let's Work Together →
-//           </a>
-//         </motion.div>
-//       </div>
-//     </motion.section>
-//   );
-// }

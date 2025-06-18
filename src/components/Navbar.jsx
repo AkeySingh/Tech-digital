@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import logoImg from "../utils/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -125,11 +126,15 @@ export default function Navbar() {
     <nav className="bg-[#f9f7f6] shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link
-            to="/"
-            className="flex items-center text-2xl font-bold text-[#00a2ad]"
-          >
-            Tech Digital
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src={logoImg}
+              alt="Tech Digital Logo"
+              className="h-16 w-auto"
+            />
+            {/* <span className="text-2xl font-bold text-[#00a2ad]">
+              Tech Digital
+            </span> */}
           </Link>
 
           {/* Desktop Menu */}
@@ -214,9 +219,17 @@ export default function Navbar() {
             </Link>
             <Link
               to="/contact"
-              className="relative px-5 py-2 font-bold text-[#00a2ad] hover:text-white hover:bg-gradient-to-r from-[#00a2ad] to-[#f6a801] rounded transition duration-300"
+              className="relative px-1 py-2 font-bold text-[#00a2ad] hover:text-white hover:bg-gradient-to-r from-[#00a2ad] to-[#f6a801] rounded transition duration-300"
             >
               Contact Us
+            </Link>
+            <Link
+              to="/plans"
+              className="relative px-1 py-2 font-bold text-[#00a2ad]  "
+            >
+              <button className="bg-[#00a2ad] hover:bg-[#f6a801] text-white px-4 py-2 rounded-lg transition">
+                Get Started
+              </button>
             </Link>
           </div>
 
@@ -229,43 +242,56 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
+
         {menuOpen && (
           <div className="md:hidden flex flex-col space-y-4 pb-4 animate-fadeIn">
             <Link
               to="/"
+              onClick={() => setMenuOpen(false)}
               className="text-[#00a2ad] hover:text-[#f6a801] transition"
             >
               Home
             </Link>
+
+            {/* Dynamic Services Section */}
             <div className="space-y-2">
               <p className="text-[#00a2ad] font-medium">Services</p>
-              <Link
-                to="/services/web"
-                className="pl-4 text-sm hover:text-[#f6a801]"
-              >
-                Web Development
-              </Link>
-              <Link
-                to="/services/app"
-                className="pl-4 text-sm hover:text-[#f6a801]"
-              >
-                App Development
-              </Link>
-              <Link
-                to="/services/seo"
-                className="pl-4 text-sm hover:text-[#f6a801]"
-              >
-                SEO Services
-              </Link>
+              {servicesData.map((service, idx) => (
+                <div key={idx} className="pl-4">
+                  <Link
+                    to={`/services/${service.path}`}
+                    className="text-sm font-semibold text-[#00a2ad] hover:text-[#f6a801] block"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {service.category}
+                  </Link>
+                  <ul className="pl-2">
+                    {service.items.map((item, subIdx) => (
+                      <li key={subIdx}>
+                        <Link
+                          to={item.path}
+                          className="text-sm text-gray-700 hover:text-[#f6a801] block"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          • {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
+
             <Link
               to="/about"
+              onClick={() => setMenuOpen(false)}
               className="text-[#00a2ad] hover:text-[#f6a801] transition"
             >
               About
             </Link>
             <Link
               to="/contact"
+              onClick={() => setMenuOpen(false)}
               className="text-[#00a2ad] hover:text-[#f6a801] transition"
             >
               Contact Us

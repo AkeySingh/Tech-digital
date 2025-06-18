@@ -103,9 +103,9 @@ export default function Plans() {
         </div>
       </div>
 
-      {/* <div>
+      <div>
         {isModel && <GetStartedModal isOpen={true} onClose={onClose} />}
-      </div> */}
+      </div>
     </motion.section>
   );
 }

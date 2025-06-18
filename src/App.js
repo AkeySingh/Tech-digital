@@ -20,6 +20,8 @@ import { useEffect } from "react";
 import Home from "./pages/home";
 import StartJourney from "./components/StartJourney";
 import Plans from "./components/Plans";
+import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -40,6 +42,9 @@ const AnimatedRoutes = () => {
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
+
         <Route path="/startjourney" element={<StartJourney />} />
         <Route path="/plans" element={<Plans />} />
       </Routes>

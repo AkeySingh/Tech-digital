@@ -1,6 +1,6 @@
 // src/utils/animationVariants.js
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  // hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,

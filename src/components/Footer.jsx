@@ -79,7 +79,10 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/services/web-design" className="hover:text-white">
+              <Link
+                to="/services/website-development"
+                className="hover:text-white"
+              >
                 Website Design
               </Link>
             </li>
@@ -89,7 +92,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/services/ads" className="hover:text-white">
+              <Link to="/services/ppc-advertising" className="hover:text-white">
                 Google & Meta Ads
               </Link>
             </li>
@@ -120,7 +123,7 @@ export default function Footer() {
               <FaLinkedin />
             </a>
           </div>
-          <p className="text-sm mb-2">📧 support@techdigital.com</p>
+          <p className="text-sm mb-2">📧 support@techdigitalsolutions.com</p>
           <p className="text-sm mb-4">📍 New Delhi, India</p>
 
           <form
