@@ -130,11 +130,8 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Tech Digital Logo"
-              className="h-16 w-auto"
+              className="h-10 w-auto"
             />
-            {/* <span className="text-2xl font-bold text-[#00a2ad]">
-              Tech Digital
-            </span> */}
           </Link>
 
           {/* Desktop Menu */}
