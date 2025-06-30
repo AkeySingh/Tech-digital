@@ -103,6 +103,7 @@ export const services = [
     pricingNote:
       "Custom packages available based on keyword competitiveness, current site health, and target geography. Book a free SEO audit to get started.",
   },
+
   {
     title: "PPC Advertising",
     slug: "ppc-advertising",
@@ -183,6 +184,7 @@ export const services = [
     pricingNote:
       "Budgets are flexible and can be scaled based on your industry and goals.",
   },
+
   {
     title: "Social Media Marketing",
     slug: "social-media",
@@ -262,6 +264,7 @@ export const services = [
     pricingNote:
       "We offer monthly SMM packages including content, ads, and reporting.",
   },
+
   {
     title: "Email Marketing",
     slug: "email-marketing",
@@ -334,6 +337,7 @@ export const services = [
     pricingNote:
       "Pricing depends on list size and email volume. Free audits available.",
   },
+
   {
     title: "Content Marketing",
     slug: "content-marketing",
@@ -405,6 +409,7 @@ export const services = [
     ],
     pricingNote: "Flexible packages based on content volume and formats.",
   },
+
   {
     title: "Branding Strategy",
     slug: "branding-strategy",
@@ -546,6 +551,7 @@ export const services = [
       },
     ],
   }, // Website Developemnt
+
   {
     title: "App Development",
     slug: "app-development",
@@ -624,6 +630,7 @@ export const services = [
       },
     ],
   }, // App Development
+
   {
     title: "Analytics & Reporting",
     slug: "analytics",
