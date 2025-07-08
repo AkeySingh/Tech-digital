@@ -43,8 +43,6 @@ function FloatingBox({ position, color, onClick, isActive }) {
   );
 }
 
-const CLICK_SOUND_URL = "https://actions.google.com/sounds/v1/ui/click.ogg";
-
 export default function InteractiveHero() {
   const [activeIndex, setActiveIndex] = useState(null);
   const audioRef = useRef(null);

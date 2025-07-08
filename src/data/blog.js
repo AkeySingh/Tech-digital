@@ -1,8 +1,5 @@
-// blogData.js
-
 import seoImg from "../utils/seo.svg";
 import webImg from "../utils/web_01.svg";
-import app from "../utils/App_01.svg";
 import social from "../utils/social-media.svg";
 
 export const blogs = [
@@ -11,14 +8,44 @@ export const blogs = [
     title: "5 SEO Tips to Boost Your Website Ranking",
     slug: "seo-tips-to-boost-ranking",
     summary:
-      "Discover effective SEO strategies to improve your visibility on search engines and drive     organic traffic.",
-    content: `Search Engine Optimization (SEO) is essential in driving traffic and improving your site's visibility. Here's how you can optimize your site effectively:\n
-1. **Keyword Research** – Find and use high-volume, low-competition keywords.\n
-2. **On-Page Optimization** – Use your keywords in meta tags, headings, and content strategically.\n
-3. **Speed Optimization** – Compress images and use caching to load your pages faster.\n
-4. **Backlink Building** – Acquire backlinks from reputable websites.\n
-5. **Quality Content** – Publish valuable, original content regularly.\n
-Apply these techniques consistently and measure results through tools like Google Analytics and Search Console.`,
+      "Discover effective SEO strategies to improve your visibility on search engines and drive organic traffic.",
+    content: [
+      {
+        title: "Introduction",
+        description:
+          "SEO is essential to boost organic traffic and increase your website's visibility on search engines like Google. Below are 5 proven techniques to help your website rank higher in 2025.",
+      },
+      {
+        title: "1. Keyword Research",
+        description:
+          "Use tools like Ahrefs, SEMrush, or Ubersuggest to identify high-volume, low-competition keywords your target audience is searching for.",
+      },
+      {
+        title: "2. On-Page Optimization",
+        description:
+          "Place your keywords naturally in meta tags, H1/H2 headings, image alt attributes, and internal links to improve relevance.",
+      },
+      {
+        title: "3. Speed Optimization",
+        description:
+          "Compress images, reduce script size, enable lazy loading, and use CDNs to enhance page speed and overall user experience.",
+      },
+      {
+        title: "4. Backlink Building",
+        description:
+          "Reach out to related industry blogs for guest posts or backlink partnerships. Focus on creating link-worthy content like infographics or case studies.",
+      },
+      {
+        title: "5. Quality Content",
+        description:
+          "Write original, helpful content that directly answers user questions. Keep your content updated and structured with proper headings, bullet points, and relevant internal links.",
+      },
+      {
+        title: "Conclusion",
+        description:
+          "Track performance with tools like Google Analytics and Search Console. SEO success takes time, but consistent efforts lead to sustainable growth in traffic and visibility.",
+      },
+    ],
     date: "2025-06-10",
     author: "Abhishek Kumar",
     category: "SEO",
@@ -27,40 +54,110 @@ Apply these techniques consistently and measure results through tools like Googl
   },
   {
     id: 2,
-    title: "Why Responsive Web Design Matters in 2025",
-    slug: "responsive-web-design-2025",
+    title: "How to Build a High-Converting Website in 2025",
+    slug: "high-converting-website-tips",
     summary:
-      "Learn why mobile-first and responsive design are essential for user experience and SEO.",
-    content: `Responsive web design ensures that your website looks and functions well across all devices and screen sizes.\n
-Here’s why it matters:\n
-- **Mobile Usage**: Over 60% of web traffic now comes from mobile devices.\n
-- **SEO Benefits**: Google prioritizes mobile-friendly sites in search rankings.\n
-- **User Experience**: Responsive layouts reduce bounce rates and improve engagement.\n
-- **Cost Efficiency**: One site for all devices is easier and cheaper to maintain.\n
-Ensure your site uses flexible grids, media queries, and responsive images to stay ahead in 2025.`,
-    date: "2025-06-01",
-    author: "Ritika Sharma",
+      "Learn the key elements that make a modern website successful — from UX design to CTAs and responsive layout.",
+    content: [
+      {
+        title: "Introduction",
+        description:
+          "Your website is your 24/7 salesperson. Building one that converts visitors into customers is essential for any business today.",
+      },
+      {
+        title: "1. Clear Call-to-Actions (CTAs)",
+        description:
+          "Use visible, compelling CTAs throughout the site. Buttons like 'Get Started' or 'Schedule a Call' should be easily accessible and above the fold.",
+      },
+      {
+        title: "2. Mobile-First Design",
+        description:
+          "Over 60% of users browse on mobile. Your website must be responsive and optimized for speed and usability on all devices.",
+      },
+      {
+        title: "3. Fast Loading Speed",
+        description:
+          "Use compressed images, clean code, and hosting/CDNs to achieve a load time under 3 seconds. Speed directly impacts bounce rates.",
+      },
+      {
+        title: "4. Visual Hierarchy",
+        description:
+          "Use font size, spacing, and color to guide user attention. Headlines should pop, and sections should flow logically.",
+      },
+      {
+        title: "5. Trust Builders",
+        description:
+          "Add client testimonials, security badges, case studies, and certifications to build trust and credibility.",
+      },
+      {
+        title: "Conclusion",
+        description:
+          "Every detail of your website contributes to conversions. Test often, measure results, and evolve based on analytics.",
+      },
+    ],
+    date: "2025-06-14",
+    author: "Sneha Tiwari",
     category: "Web Design",
     image: webImg,
-    readingTime: "3 min read",
+    readingTime: "5 min read",
   },
   {
     id: 3,
-    title: "How to Create a Successful Social Media Strategy",
-    slug: "social-media-strategy-guide",
+    title: "Top 7 Social Media Strategies for Digital Growth",
+    slug: "social-media-growth-strategies",
     summary:
-      "Build a strong brand presence across social platforms using targeted content and analytics.",
-    content: `Creating a winning social media strategy involves more than just posting. Here's what you should do:\n
-1. **Define Your Goals**: Brand awareness, traffic, leads, or sales.\n
-2. **Know Your Audience**: Understand where your users spend time and what content resonates.\n
-3. **Content Calendar**: Plan consistent, engaging posts with themes and promotions.\n
-4. **Track KPIs**: Use metrics like reach, engagement, and conversion to evaluate success.\n
-5. **Adjust & Optimize**: Analyze performance and tweak strategies as needed.\n
-Use tools like Buffer, Hootsuite, or Meta Business Suite to schedule and manage content effectively.`,
-    date: "2025-05-25",
-    author: "Sameer Joshi",
+      "Use these powerful tactics to increase engagement, followers, and brand awareness on platforms like Instagram, LinkedIn, and YouTube.",
+    content: [
+      {
+        title: "Introduction",
+        description:
+          "Social media is not just for likes — it's a powerful tool to grow your brand and build real community. Here's how to make it work for you.",
+      },
+      {
+        title: "1. Choose the Right Platforms",
+        description:
+          "Focus on platforms where your audience actually lives. B2B? Use LinkedIn. Visual brand? Use Instagram or Pinterest.",
+      },
+      {
+        title: "2. Post Consistently",
+        description:
+          "Stick to a schedule — daily stories, 3-4 weekly posts, and monthly campaigns help maintain momentum and visibility.",
+      },
+      {
+        title: "3. Use Reels & Video",
+        description:
+          "Short-form video dominates in 2025. Use Reels, Shorts, and carousels to grab attention and increase reach.",
+      },
+      {
+        title: "4. Leverage Hashtags Strategically",
+        description:
+          "Use niche, mid-range hashtags rather than super-popular ones. Track what performs best for your industry.",
+      },
+      {
+        title: "5. Engage With Your Audience",
+        description:
+          "Reply to comments, DM followers, and join conversations. Community > just broadcasting content.",
+      },
+      {
+        title: "6. Collaborate With Influencers",
+        description:
+          "Even micro-influencers (1k–10k followers) can drive engagement. Look for creators aligned with your values.",
+      },
+      {
+        title: "7. Analyze and Adapt",
+        description:
+          "Use platform insights and tools like Buffer, Hootsuite, or Meta Business Suite to track what works and double down.",
+      },
+      {
+        title: "Conclusion",
+        description:
+          "Social media rewards consistency, creativity, and interaction. Build your presence, track your results, and keep evolving.",
+      },
+    ],
+    date: "2025-07-01",
+    author: "Ritika Shah",
     category: "Social Media",
     image: social,
-    readingTime: "5 min read",
+    readingTime: "6 min read",
   },
 ];

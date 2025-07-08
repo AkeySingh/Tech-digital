@@ -23,7 +23,7 @@ const features = [
   {
     icon: "💼",
     title: "Experienced Team",
-    desc: "10+ years of proven experience across design, development, and marketing.",
+    desc: "6+ years of proven experience across design, development, and marketing.",
   },
   {
     icon: "📊",

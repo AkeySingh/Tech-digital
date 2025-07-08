@@ -1,7 +1,6 @@
 // src/components/InteractiveBackground.jsx
 import React, { useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
 
 function FloatingOrbs() {
   const groupRef = useRef();
@@ -33,7 +32,7 @@ function FloatingOrbs() {
     const x = (Math.random() - 0.5) * 10;
     const y = (Math.random() - 0.5) * 6;
     const z = (Math.random() - 0.5) * 5;
-    const scale = 0.5 + Math.random();
+    // const scale = 0.5 + Math.random();
     orbs.push(
       <mesh key={i} position={[x, y, z]}>
         <sphereGeometry args={[1, 32, 32]} />

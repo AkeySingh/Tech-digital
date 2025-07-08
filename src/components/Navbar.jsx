@@ -209,7 +209,7 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              to="/"
+              to="/blog"
               className="relative px-5 py-2 font-bold text-[#00a2ad] hover:text-white hover:bg-gradient-to-r from-[#00a2ad] to-[#f6a801] rounded transition duration-300"
             >
               Blog

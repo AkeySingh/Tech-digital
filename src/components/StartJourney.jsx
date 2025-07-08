@@ -1,10 +1,19 @@
 // src/pages/StartJourney.jsx
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../utils/animationVariants";
 import { Link } from "react-router-dom";
+import GetStartedModal from "./GetStartedModal";
 
 export default function StartJourney() {
+  const [isModel, setIsModel] = useState(false);
+  const handleGetstart = () => {
+    setIsModel(true);
+  };
+  const onClose = () => {
+    setIsModel(false);
+  };
+
   return (
     <motion.section
       className="bg-gradient-to-tr from-white to-indigo-50 py-20 px-6"
@@ -89,11 +98,14 @@ export default function StartJourney() {
                 desc: "ROI-focused campaigns across Google, Meta, and more.",
               },
             ].map((service, i) => (
-              <Link to={service.path} key={i}>
-                <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">
-                  {service.name}
-                </button>
-              </Link>
+              // <Link to={service.path} key={i}>
+              <button
+                onClick={handleGetstart}
+                className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+              >
+                {service.name}
+              </button>
+              // </Link>
             ))}
           </div>
         </motion.div>
@@ -152,6 +164,10 @@ export default function StartJourney() {
             </button>
           </Link>
         </motion.div>
+      </div>
+
+      <div>
+        {isModel && <GetStartedModal isOpen={true} onClose={onClose} />}
       </div>
     </motion.section>
   );

@@ -47,11 +47,9 @@ const plans = [
 
 export default function Plans() {
   const [isModel, setIsModel] = useState(false);
-
   const handleGetstart = () => {
     setIsModel(true);
   };
-
   const onClose = () => {
     setIsModel(false);
   };
